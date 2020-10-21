@@ -10,19 +10,30 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    @Override
+     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
         Button clickMe = findViewById(R.id.myButton);
         clickMe.setOnClickListener(new View.OnClickListener() {
+            TextView txtView = findViewById(R.id.myText);
             @Override
             public void onClick(View v) {
 
+                txtView.setText("Welcome To My App");
+                 Toast.makeText(MainActivity.this, "Welcome ", Toast.LENGTH_SHORT).show();
 
-                Toast.makeText(MainActivity.this, "This is just a begining of something BIG", Toast.LENGTH_SHORT).show();
+
+
 
 
             }
 
         });
+
+
+    }
+}
